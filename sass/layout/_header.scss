@@ -1,0 +1,80 @@
+.h-page {
+  a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    margin: 0;
+
+      img {
+        width: 200px;
+      }
+    }
+  nav {
+    margin-top: 40px;
+    color: $nav-color;
+    font-weight: 700;
+    font-size: 20px;
+    text-shadow: 1px -1px 1px rgba(0,0,0,0.4);
+    li {
+      float: left;
+      a {
+        padding: 15px 20px;
+        border: 1px solid transparent;
+        @include prefix(border-radius, 25px, o moz webkit);
+        &:hover {
+          background-image: linear-gradient(to right bottom, rgba(205,204,244,1), rgba(204,244,207,1));
+          
+        }
+      }
+    }
+  }
+  .contact-us {
+    margin-top: 40px;
+    text-align: center;
+    &>span:first-of-type{
+      color: #0b5081;
+      font-weight: 600;
+    }
+    .fa {
+      font-size: 40px;
+      padding-right: 10px;
+      &:hover {
+        color: chocolate;
+        cursor: pointer;
+      }
+    }
+    .fa-mobile {
+      vertical-align: middle;
+        &:hover {
+          @keyframes ding {
+            33% {
+              transform: translateX(-3px);
+            }
+            66% {
+              transform: translateX(3px);
+            }
+
+          }
+          animation: ding 0.3s infinite forwards;
+        }
+      }
+      a {
+        float: left;
+        width: 50%;
+        padding-top: 15px;
+        &:first-of-type {
+          text-align: right;
+        }
+        &:first-of-type~a {
+          text-align: left;
+        }
+        .fa {
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+  }
+}

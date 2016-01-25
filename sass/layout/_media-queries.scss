@@ -1,0 +1,42 @@
+@media screen and (min-width: $xs-width) and (max-width: $sm-width - 1){
+  .our-prices {
+    section {
+      article {
+        &:nth-child(even){
+          clear: both;
+        }
+        &:nth-child(1) ~ article {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $sm-width) and (max-width: $md-width - 1){
+  .our-prices {
+    section {
+      article {
+        &:nth-child(2n+1){
+          clear: both;
+        }
+        &:nth-child(2) ~ article {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $md-width){
+  .our-prices {
+    section {
+      article {
+        &:nth-child(3n+1){
+          clear: both;
+        }
+        &:nth-child(3) ~ article {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

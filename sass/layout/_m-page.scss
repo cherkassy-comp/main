@@ -1,0 +1,148 @@
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes move {
+  to {
+    transform: rotate(-45deg);
+  }
+}
+.pc-services{
+  background-image: linear-gradient(to right bottom, rgba(205,204,244,1), rgba(204,244,207,1));
+  .screen {
+    background-color: black;
+    box-shadow: 0 1px 5px black, 0 0 0 rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    .img-wrapper {
+      position: relative;
+      img {
+        max-height: 400px;
+      }
+      .line-service-name {
+        box-shadow: 0 -2px 1px -2px cyan;
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        bottom: 5px;
+        padding: 20px 15px 15px;
+        background-image: linear-gradient(
+                        to right bottom,
+                        rgba(53, 100, 125, 0.5),
+                        rgba(255, 255, 255, 0.5));
+        span {
+          display: block;
+          color: white;
+          font-size: 20px;
+          &:first-child{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .mcbook {
+      background: linear-gradient(to top, #202122 0%, #202225 50%, #202224 100%) #191b1e;
+      box-shadow: inset 0 1px 0 #201f24;
+      position: absolute;
+      bottom: 1px;
+      left: 1px;
+      width: calc(100% - 2px);
+      height: 20px;
+      border-radius: 0 0 5px 5px;
+      text-align: center;
+      img {
+        width: auto;
+        display: inline-block;
+        vertical-align: inherit;
+      }
+    }
+  }
+  .keyboard {
+    clear: both;
+    margin: auto;
+    width: 75%;
+    [class*='sh'] {
+      background-color: #3a3737;
+      float: left;
+      height: 5px;
+    }
+    .left-sh, .right-sh {
+      background-image: linear-gradient(to left, #bead9e 0%, #fceee2 0%, #fdecdf 13%, #fae7d7 50%, #fcecdc 63%, #fbeada 90%, #fff3e9 96%, #b39b86 98%, #534438 99%, #624a39 99%, #9f938b 100%);
+      box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.05);
+      width: 42%;
+    }
+    .right-sh {
+      background-image: linear-gradient(to right, #bead9e 0%, #fceee2 0%, #fdecdf 13%, #fae7d7 50%, #fcecdc 63%, #fbeada 90%, #fff3e9 96%, #b39b86 98%, #534438 99%, #624a39 99%, #9f938b 100%);
+    }
+    .center-sh {
+      width: 16%;
+      background: linear-gradient(to right, #735e4b 0%, #9f8876 1%, #cbb89f 3%, #e0cdb5 4%, #f4e0cb 8%, #fdead7 27%, #feebd8 50%, #f7e3cf 86%, #e5d1ba 93%, #d5c1a9 96%, #8e7c68 99%, #4f4239 100%) #c3c2c8;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03), inset 0 0 0 rgba(255, 255, 255, 0.03);
+    }
+    .notebook-bottom {
+      height: 15px;
+      width: 100%;
+      background-image: linear-gradient(to top, #49372b 0%, #49372b 5%, #605142 15%, #675746 21%, #786757 35%, #897865 44%, #a5907b 80%, #b4a08e 92%, #cfbdab 97%, #f0e0ce 100%);
+      box-shadow: inset 0 0 5px #433326;
+      border-radius: 0 0 50px 50px/0 0 10px 10px;
+    }
+  }
+}
+.our-prices {
+  background-image: linear-gradient(to right bottom,#7AFFE6, #fffea3) ;
+  h2 {
+    margin-top: 80px;
+    font-weight: 700;
+  }
+  section {
+    margin: 80px 0;
+    article {
+      .service-icon {
+        width: 30%;
+        float: left;
+        height: 100%;
+        padding-top: 15%;
+        i {
+
+          color: coral;
+          font-size: 100px;
+          &.fa-chrome:hover {
+            @include prefix(animation, rotate 1s infinite linear, o moz ms webkit);
+          }
+          &.fa-windows:hover, &.fa-wifi:hover, &.fa-bug:hover, &.fa-shield:hover {
+            transform: scale(1.2);
+          }
+          &.fa-wrench:hover {
+            @include  prefix(animation, move 3s infinite linear alternate,o moz ms webkit);
+          }
+          &:hover {
+            transition: 0.7s linear;
+          }
+        }
+      }
+      .about-service {
+        width: 70%;
+        margin-left: 30%;
+        h3 {
+          text-align: center;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        span.price {
+          text-align: center;
+          display: block;
+          padding: 20px 0;
+          font-weight: 700;
+          color: rgba(100, 100, 50, 1);
+          font-family: 'Lobster', cursive;
+        }
+      }
+      ul {
+        list-style-type: square;
+        padding-left: 20px;
+      }
+    }
+  }
+}

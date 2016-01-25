@@ -1,0 +1,16 @@
+@import
+'utils/_variables',
+'utils/_mixins.scss';
+
+@import
+'layout/_layout',
+'layout/_header',
+'layout/_footer',
+'layout/_m-page',
+'layout/_media-queries';
+
+@import
+'components/_buttons',
+'components/_sliders',
+'components/_media.scss';
+
